@@ -4,9 +4,9 @@ import { s, vs } from "react-native-size-matters";
 import { AppColors } from "../../styles/colors";
 
 interface AppTextInputProps {
+  placeholder?: string
   value?: string;
   onChangeText?: (text: string) => void;
-  placeholder?: string;
   secureTextEntry?: boolean;
   keyboardType?: "default" | "email-address" | "numeric";
   style?: TextStyle;

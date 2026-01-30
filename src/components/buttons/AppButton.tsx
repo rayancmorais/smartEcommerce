@@ -12,12 +12,12 @@ import { AppColors } from "../../styles/colors";
 // Define the types for the props
 interface AppButtonProps {
   onPress?: () => void; // Callback function for onPress event
-  title?: string; // Title of the button
+  title: string; // Title of the button
   backgroundColor?: string; // Optional background color, defaults to AppColors.primary
   textColor?: string; // Optional text color, defaults to AppColors.white
   style?: ViewStyle | ViewStyle[]; // Optional custom styles for the button
-  styleTitle?: TextStyle | TextStyle[]; // Optional custom styles for the title text
   disabled?: boolean; // Optional disabled flag
+  styleTitle?: TextStyle; // Optional custom styles for the title
 }
 
 const AppButton: React.FC<AppButtonProps> = ({
@@ -26,7 +26,7 @@ const AppButton: React.FC<AppButtonProps> = ({
   backgroundColor = AppColors.primary,
   textColor = AppColors.white,
   style,
-  styleTitle,
+  styleTitle = {},
   disabled = false,
 }) => {
   return (
